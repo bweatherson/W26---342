@@ -30,37 +30,113 @@ format:
 
 ## Individual Preference Rankings
 
-**Definition**: An individual preference ranking is a complete ordering of all available alternatives from most preferred to least preferred.
+**Definition**: An individual preference ranking is an ordering of all available alternatives from most preferred to least preferred, with ties allowed, but not gaps.
 
-**Key Properties**:
-- **Complete**: Every pair of alternatives can be compared
-- **Transitive**: If A > B and B > C, then A > C
-- **Antisymmetric**: If A > B, then not B > A
+## Individual Preference Rankings
 
-**Example**: Three voters choosing between candidates A, B, C
-- Voter 1: A > B > C
-- Voter 2: B > C > A  
-- Voter 3: C > A > B
+We'll write A >~i~ B to mean that person i prefers A to B, and A =~i~ B to mean that person i thinks that A and B are equally good.
 
----
+**Key Assumptions**:
+
+- **Completeness**: Exactly one of A >~i~ B, B >~i~ A, and A =~i~ B holds.
+- **Transitivity of Better**: If A >~i~ B and B >~i~ C, then A >~i~ C.
+- **Transitivity of Equal**: If A =~i~ B and B =~i~ C, then A =~i~ C.
 
 ## Group Preference Rankings
 
-**The Challenge**: How do we combine individual rankings into a single social ranking?
+We'll write A >~∀~ B to mean that the group prefers A to B, and A =~∀~ B to mean that the group thinks they are equally good.
+
+**Same Key Assumptions**
+
+- **Completeness**: Exactly one of A >~∀~ B, B >~∀~ A, and A =~∀~ B holds.
+- **Transitivity of Better**: If A >~∀~ B and B >~∀~ C, then A >~∀~ C.
+- **Transitivity of Equal**: If A =~∀~ B and B =~∀~ C, then A =~∀~ C.
+
+## Big Question
+
+How do we combine individual rankings into a single social ranking?
 
 **What We Want**: A systematic method (social choice function) that takes individual preference profiles and produces a group preference ranking.
 
-**Examples of Attempted Solutions**:
-- Majority rule
-- Plurality voting
-- Borda count
-- Condorcet method
+## Assumptions Again
 
-**The Problem**: Arrow shows that no method can satisfy all our reasonable requirements simultaneously.
+There are a few strange things about the setup.
 
----
+- Most of us don't have views about all possible outcomes of an election.
+- The combination just takes individual *rankings* into account. It doesn't look at *strength* of preference.
+- The output doesn't just ask for a winner, but for a full ordering.
 
-## Arrow's Conditions for Democratic Choice
+## A Non-Answer
+
+Say A >~∀~ B if more people have A >~i~ B than have B >~∀~ A, and A =~∀~ B if the numbers are the same.
+
+This is a very simple kind of majoritarian rule.
+
+## Condorcet Again
+
+You can probably see where this is going. 
+
+- Imagine that there are three options, A, B and C.
+- And there are three voters, X, Y and Z.
+- X has A >~X~ B >~X~ C.
+- Y has B >~Y~ C >~Y~ A.
+- Z has C >~Z~ A >~Z~ B.
+
+## Condorcet Again
+
+- Since two people (X and Z) prefer A to B, we have A >~∀~ B.
+- Since two people (X and Y) prefer B to C, we have B >~∀~ C.
+- Since two people (Y and Z) prefer C to A, we have C >~∀~ A.
+- And we've violated transitivity.
+
+## Plurality Again
+
+Let's try a different solution.
+
+- Ignore every part of >~i~ except who is top.
+- For each option, give it 1 point for every voter for which it's the top option.
+- If the voter has two options tied for top, give then 1/2 point each, and so on for more ties.
+- Rank the options by how many points.
+
+## Plurality Again
+
+- This is guaranteed to satisfy the assumptions.
+- Any approach where each option gets a number, and you rank the numbers, will produce the right kind of ordering.
+- But it has a very strange result.
+
+## Plurality Again
+
+Imagine there are three options, A, B and C, and 100 voters. On Monday the preferences are like this:
+
+- 40 people have A > B > C.
+- 35 people have B > C > A.
+- 25 people have C > B > A.
+- So A wins, with 40 votes, and B is second, with 35.
+
+## Plurality Again
+
+On Tuesday, 10 of the people in the last group change their mind, just about B and C. So now we have.
+
+- 40 people have A > B > C.
+- 45 people have B > C > A.
+- 15 people have C > B > A.
+- So now B moves ahead of A in the social ranking, even though no one changed their mind abiout A and B.
+- Is this odd?
+
+## Arrow's Approach
+
+Rather than going through options one at a time, let's find some principles.
+
+- Start with a list of things we'd like the aggregation to be like.
+- See what kind of things could meet all of the requirements on our list.
+
+## Arrow's Theorem
+
+For a very natural set of requirements, there are **zero** aggregation rules that satisfy all of them.
+
+- Any aggregation rule you pick will have some slightly odd feature.
+
+## Arrow's Requirements
 
 Arrow identified four conditions that seem essential for any fair democratic system:
 
@@ -69,84 +145,68 @@ Arrow identified four conditions that seem essential for any fair democratic sys
 3. **Independence of Irrelevant Alternatives** (I)
 4. **Non-dictatorship** (D)
 
-We'll examine each condition, with special focus on Independence of Irrelevant Alternatives.
-
----
-
-## Condition 1: Unrestricted Domain (U)
+## Unrestricted Domain (U)
 
 **What it means**: The voting system must work for ANY possible combination of individual preference rankings.
 
 **Why it seems reasonable**: We shouldn't restrict what preferences people are allowed to have in a democracy.
 
-**Example**: The system must handle:
-- Unanimous preferences (everyone agrees)
-- Completely opposed preferences  
-- Cyclical preferences (A > B > C > A in majority comparisons)
-- Any other logically possible preference profile
+## Weak Pareto Principle (P)
 
----
-
-## Condition 2: Weak Pareto Principle (P)
-
-**What it means**: If everyone prefers alternative X to alternative Y, then the group ranking should also prefer X to Y.
+**What it means**: If everyone prefers alternative A to alternative B, then the group ranking should also prefer A to B.
 
 **Why it seems reasonable**: If there's unanimous agreement, the social choice should reflect that agreement.
 
-**Example**: 
-- If all voters rank A > B
-- Then the group ranking must have A > B
-- This seems like a minimal requirement for democracy
+## Vilfredo Pareto
 
----
+:::: {.columns}
 
-## Condition 3: Independence of Irrelevant Alternatives (I)
+::: {.column width="50%"}
+![Vilfredo Pareto](images/pareto.jpg)
+:::
 
-**What it means**: The social ranking between any two alternatives should depend ONLY on how individuals rank those two alternatives, not on how they rank other alternatives.
+::: {.column width="50%"}
+- Lived 1848-1923.
+- Trained in Turin, worked primarily at Lausanne.
+- He died around the time Mussolini came to power, and the Italian fascists claimed him as an inspiration. This *may* have been a misreading; he often sounds like a classical liberal. 
+:::
+
+::::
+
+## Pareto Principles
+
+**Weak Pareto**: If for all i, A >~i~ B, then A >~∀~ B.
+
+**Strong Pareto**: If for some i, A >~i~ B, and for no i B >~i~ A (but maybe there are some ties), then A >~∀~ B.
+
+The latter is more contentious, but it isn't needed for the proof.
+
+(In fact, all that the proof really needs is that every outcome is possible.)
+
+## Independence of Irrelevant Alternatives (I)
+
+**What it means**: The social ranking between any two alternatives should depend *only* on how individuals rank those two alternatives, not on how they rank other alternatives.
 
 **Key Insight**: Information about "irrelevant" third alternatives shouldn't change the relative ranking of two alternatives.
 
 **Why it seems reasonable**: If we're deciding between A and B, it shouldn't matter what people think about C.
 
----
 
-## Independence of Irrelevant Alternatives: Examples
+## IIA: Formal Statement
 
-**Example 1 - Violating IIA**:
-- Initial preferences: Voter 1: A > B > C, Voter 2: B > A > C
-- Suppose social choice gives: A > B
-- Now C is removed from consideration
-- Preferences become: Voter 1: A > B, Voter 2: B > A  
-- IIA requires the social choice to still prefer A > B
-- Any system that now prefers B > A violates IIA
+**Formal Definition**: For any two preference profiles R and R', if every individual has the same preference between alternatives A and B in both profiles, then the social choice between A and B must be the same in both profiles.
 
-**Example 2 - Why this matters**:
-- In presidential elections, the presence of a third-party candidate can change who wins between the two main candidates
-- This violates IIA and can lead to strategic voting
+This isn't a property of how the aggregation function treats what happens on any given day; it's a property of how it treats possible changes in individual preferences.
 
----
-
-## Independence of Irrelevant Alternatives: Formal Statement
-
-**Formal Definition**: For any two preference profiles R and R', if every individual has the same preference between alternatives x and y in both profiles, then the social choice between x and y must be the same in both profiles.
-
-**In other words**:
-- Take any two alternatives: x and y
-- Consider two different voting scenarios
-- If each voter's preference between x and y is identical in both scenarios
-- Then the group's preference between x and y must also be identical
-
-**This rules out**: Systems where the presence/absence of other alternatives affects pairwise comparisons.
-
----
-
-## Condition 4: Non-dictatorship (D)
+## Non-dictatorship (D)
 
 **What it means**: No single individual's preferences should always determine the group ranking, regardless of what others prefer.
 
 **Why it seems reasonable**: This is basic to democratic ideals - no one person should have absolute power.
 
-**Formal statement**: There should be no individual i such that for every preference profile, if individual i prefers x to y, then the social choice prefers x to y.
+## Non-dictatorship (D)
+
+**Formal statement**: For every individual i, there is some profile R and some pair of options A and B such that in R, 
 
 **Note**: This doesn't prevent someone from being influential, just from being decisive in every case.
 
