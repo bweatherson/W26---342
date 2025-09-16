@@ -1,24 +1,32 @@
 ---
 title: "Arrow"
+date: 1/14/2026
 format:
-    beamer: default
     revealjs: default
+    beamer: default
 ---
 
-# Arrow's Impossibility Theorem
-## Philosophy 300 - Social Choice Theory
+## Kenneth Arrow
 
----
+:::: {.columns}
 
-## What is Arrow's Impossibility Theorem?
+::: {.column width="50%"}
+![Kenneth Arrow, photo by  Linda A. Cicero](images/ken_arrow.jpg)
+:::
+
+::: {.column width="50%"}
+- Lived 1921-2017.
+- Worked primarily at Stanford.
+- Won Nobel Prize in 1972.
+- Could have won it twice over, once for work on equilibrium theory, and once for what we'll cover.
+:::
+
+::::
+
+## Impossibility Theorem
 
 **Arrow's Impossibility Theorem** (1951) demonstrates that no voting system can simultaneously satisfy a set of seemingly reasonable conditions for democratic decision-making.
 
-**The Central Question**: Can we design a "perfect" democratic system that aggregates individual preferences into collective choices?
-
-**Arrow's Answer**: No such system exists.
-
----
 
 ## Individual Preference Rankings
 

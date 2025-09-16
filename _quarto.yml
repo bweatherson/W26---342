@@ -1,6 +1,8 @@
 project:
   type: default
 
+date-format: full
+
 format:
   revealjs:
       theme: [default, custom_theme_scss.scss]
@@ -8,21 +10,21 @@ format:
       show-slide-number: all
       hash-type: number
       preview-links: auto
-      chalkboard: true
-      multiplex: true
+      chalkboard: false
+      multiplex: false
       footer: "PHIL 342 | University of Michigan"
       logo: "logo.png"
-      css: custom-styles_css.css
+      css: custom_styles_css.css
       incremental: true
       code-line-numbers: true
       highlight-style: github
       transition: slide
       background-transition: fade
       smaller: false
-      scrollable: false
+      scrollable: true
       navigation-mode: vertical
-      controls-layout: bottom-right
-      controls-tutorial: true
+      controls: false
+      menu: true
   beamer:
       theme: metropolis
       colortheme: default

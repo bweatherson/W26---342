@@ -1,8 +1,77 @@
 /* Additional custom styles for HTML slides */
 
-/* Ensure consistent spacing */
+/* Completely remove slide menu space and force full width */
+.reveal .slides {
+  margin-left: 0 !important;
+  width: 100% !important;
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* Hide the slide menu entirely when not active */
+.reveal .slide-menu {
+  position: fixed !important;
+  left: -100% !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  transition: left 0.3s ease !important;
+  width: 300px !important;
+}
+
+
+
+.reveal .slide-menu.active {
+  left: 0 !important;
+}
+
+/* Move menu button to corner */
+.reveal .slide-menu-button {
+  position: fixed !important;
+  top: 12px;
+  left: 12px;
+  z-index: 30 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  opacity: 0;
+}
+
+.reveal .slide-menu-button:hover {
+  opacity: 1;
+}
+
+/* Ensure slides use full width but with proper constraints */
 .reveal .slides section {
-  padding: 2em;
+  width: 100% !important;
+  max-width: 100% !important;
+  left: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0em 2em 2em 2em !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* Force text to wrap properly */
+.reveal .slides section h1,
+.reveal .slides section h2,
+.reveal .slides section h3,
+.reveal .slides section p {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* Remove any reserved space */
+.reveal {
+  overflow: hidden;
+}
+
+.reveal .slides section {
+  width: 100% !important;
+  left: 0 !important;
+  top: 0% !important;
+  transform: translateY(-50%) !important;
 }
 
 /* Better spacing for title slides */
@@ -111,4 +180,21 @@
 .reveal .progress:focus {
   outline: 2px solid #006699;
   outline-offset: 2px;
+}
+
+/* Remove sidebar space reservation */
+.reveal .slides {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+/* Move menu button to corner */
+.reveal .slide-menu-button {
+  position: fixed !important;
+  top: 12px;
+  left: 12px;
+  z-index: 30 !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
 }

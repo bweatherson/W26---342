@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="01_files/libs/clipboard/clipboard.min.js"></script>
-<script src="01_files/libs/quarto-html/tabby.min.js"></script>
-<script src="01_files/libs/quarto-html/popper.min.js"></script>
-<script src="01_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="01_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="01_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="01_files/libs/quarto-html/quarto-syntax-highlighting-662ae1889177880cb371f83234c0a158.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="03_files/libs/clipboard/clipboard.min.js"></script>
+<script src="03_files/libs/quarto-html/tabby.min.js"></script>
+<script src="03_files/libs/quarto-html/popper.min.js"></script>
+<script src="03_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="03_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="03_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="03_files/libs/quarto-html/quarto-syntax-highlighting-662ae1889177880cb371f83234c0a158.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.30">
 
   <title>Arrow</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="01_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="01_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="03_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="03_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,14 +28,12 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="01_files/libs/revealjs/dist/theme/quarto-af94383f695d931ba071449197ddc6ee.css">
-  <link rel="stylesheet" href="custom-styles_css.css">
-  <link href="01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="01_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="01_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="01_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="03_files/libs/revealjs/dist/theme/quarto-af94383f695d931ba071449197ddc6ee.css">
+  <link rel="stylesheet" href="custom_styles_css.css">
+  <link href="03_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="03_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="03_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="03_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -47,6 +45,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -134,20 +133,29 @@
 <div class="quarto-title-authors">
 </div>
 
-</section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Arrow’s Impossibility Theorem</h1>
-
+  <p class="date">Wednesday, January 14, 2026</p>
 </section>
 <section class="slide level2">
-<h2>Philosophy 300 - Social Choice Theory</h2>
+<h2>Kenneth Arrow</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ken_arrow.jpg"></p>
+<figcaption>Kenneth Arrow, photo by Linda A. Cicero</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Lived 1921-2017.</li>
+<li class="fragment">Won Nobel Prize in 1972.</li>
+<li class="fragment">Could have won it twice over, once for work on equilibrium theory, and once for what we’ll cover.</li>
+</ul>
+</div></div>
 </section>
 <section class="slide level2">
-<h2>What is Arrow’s Impossibility Theorem?</h2>
+<h2>Impossibility Theorem?</h2>
 <p><strong>Arrow’s Impossibility Theorem</strong> (1951) demonstrates that no voting system can simultaneously satisfy a set of seemingly reasonable conditions for democratic decision-making.</p>
-<p><strong>The Central Question</strong>: Can we design a “perfect” democratic system that aggregates individual preferences into collective choices?</p>
-<p><strong>Arrow’s Answer</strong>: No such system exists.</p>
 </section>
 <section class="slide level2">
 <h2>Individual Preference Rankings</h2>
@@ -163,15 +171,15 @@
 <p><strong>Examples of Attempted Solutions</strong>: - Majority rule - Plurality voting - Borda count - Condorcet method</p>
 <p><strong>The Problem</strong>: Arrow shows that no method can satisfy all our reasonable requirements simultaneously.</p>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 <h2>Arrow’s Conditions for Democratic Choice</h2>
 <p>Arrow identified four conditions that seem essential for any fair democratic system:</p>
 <ol type="1">
-<li><strong>Unrestricted Domain</strong> (U)</li>
-<li><strong>Weak Pareto Principle</strong> (P)<br>
+<li class="fragment"><strong>Unrestricted Domain</strong> (U)</li>
+<li class="fragment"><strong>Weak Pareto Principle</strong> (P)<br>
 </li>
-<li><strong>Independence of Irrelevant Alternatives</strong> (I)</li>
-<li><strong>Non-dictatorship</strong> (D)</li>
+<li class="fragment"><strong>Independence of Irrelevant Alternatives</strong> (I)</li>
+<li class="fragment"><strong>Non-dictatorship</strong> (D)</li>
 </ol>
 <p>We’ll examine each condition, with special focus on Independence of Irrelevant Alternatives.</p>
 </section>
@@ -235,17 +243,17 @@
 <p><strong>5. Alternative Frameworks</strong>: Deliberative democracy, constitutional constraints</p>
 <p><strong>The Debate Continues</strong>: Each response involves trade-offs and philosophical commitments.</p>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 <h2>Discussion Questions</h2>
 <ol type="1">
-<li><p>Which of Arrow’s four conditions would you be most willing to give up? Why?</p></li>
-<li><p>Does Arrow’s Theorem show that democracy is impossible, or just that perfect democracy is impossible?</p></li>
-<li><p>How might this theorem apply to other collective decision-making contexts (committees, families, etc.)?</p></li>
-<li><p>Do you think the Independence of Irrelevant Alternatives condition is actually reasonable? Can you think of cases where context should matter?</p></li>
-<li><p>What does this theorem tell us about the nature of collective rationality?</p></li>
+<li class="fragment"><p>Which of Arrow’s four conditions would you be most willing to give up? Why?</p></li>
+<li class="fragment"><p>Does Arrow’s Theorem show that democracy is impossible, or just that perfect democracy is impossible?</p></li>
+<li class="fragment"><p>How might this theorem apply to other collective decision-making contexts (committees, families, etc.)?</p></li>
+<li class="fragment"><p>Do you think the Independence of Irrelevant Alternatives condition is actually reasonable? Can you think of cases where context should matter?</p></li>
+<li class="fragment"><p>What does this theorem tell us about the nature of collective rationality?</p></li>
 </ol>
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="logo.png" class="slide-logo"></p>
@@ -255,20 +263,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="01_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="03_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="01_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="01_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="01_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="01_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="03_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="03_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="03_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="03_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="03_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="01_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="01_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="01_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="01_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="03_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="03_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="03_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="03_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -276,15 +283,14 @@
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -292,10 +298,10 @@
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+        controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
+        controlsLayout: 'edges',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -455,7 +461,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
