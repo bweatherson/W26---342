@@ -148,31 +148,135 @@
 </div><div class="column" style="width:50%;">
 <ul>
 <li class="fragment">Lived 1921-2017.</li>
+<li class="fragment">Worked primarily at Stanford.</li>
 <li class="fragment">Won Nobel Prize in 1972.</li>
 <li class="fragment">Could have won it twice over, once for work on equilibrium theory, and once for what we’ll cover.</li>
 </ul>
 </div></div>
 </section>
 <section class="slide level2">
-<h2>Impossibility Theorem?</h2>
+<h2>Impossibility Theorem</h2>
 <p><strong>Arrow’s Impossibility Theorem</strong> (1951) demonstrates that no voting system can simultaneously satisfy a set of seemingly reasonable conditions for democratic decision-making.</p>
 </section>
 <section class="slide level2">
 <h2>Individual Preference Rankings</h2>
-<p><strong>Definition</strong>: An individual preference ranking is a complete ordering of all available alternatives from most preferred to least preferred.</p>
-<p><strong>Key Properties</strong>: - <strong>Complete</strong>: Every pair of alternatives can be compared - <strong>Transitive</strong>: If A &gt; B and B &gt; C, then A &gt; C - <strong>Antisymmetric</strong>: If A &gt; B, then not B &gt; A</p>
-<p><strong>Example</strong>: Three voters choosing between candidates A, B, C - Voter 1: A &gt; B &gt; C - Voter 2: B &gt; C &gt; A<br>
-- Voter 3: C &gt; A &gt; B</p>
+<p><strong>Definition</strong>: An individual preference ranking is an ordering of all available alternatives from most preferred to least preferred, with ties allowed, but not gaps.</p>
+</section>
+<section class="slide level2">
+<h2>Individual Preference Rankings</h2>
+<p>We’ll write A &gt;<sub>i</sub> B to mean that person i prefers A to B, and A =<sub>i</sub> B to mean that person i thinks that A and B are equally good.</p>
+<p><strong>Key Assumptions</strong>:</p>
+<ul>
+<li class="fragment"><strong>Completeness</strong>: Exactly one of A &gt;<sub>i</sub> B, B &gt;<sub>i</sub> A, and A =<sub>i</sub> B holds.</li>
+<li class="fragment"><strong>Transitivity of Better</strong>: If A &gt;<sub>i</sub> B and B &gt;<sub>i</sub> C, then A &gt;<sub>i</sub> C.</li>
+<li class="fragment"><strong>Transitivity of Equal</strong>: If A =<sub>i</sub> B and B =<sub>i</sub> C, then A =<sub>i</sub> C.</li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>Group Preference Rankings</h2>
-<p><strong>The Challenge</strong>: How do we combine individual rankings into a single social ranking?</p>
+<p>We’ll write A &gt;<sub>∀</sub> B to mean that the group prefers A to B, and A =<sub>∀</sub> B to mean that the group thinks they are equally good.</p>
+<p><strong>Same Key Assumptions</strong></p>
+<ul>
+<li class="fragment"><strong>Completeness</strong>: Exactly one of A &gt;<sub>∀</sub> B, B &gt;<sub>∀</sub> A, and A =<sub>∀</sub> B holds.</li>
+<li class="fragment"><strong>Transitivity of Better</strong>: If A &gt;<sub>∀</sub> B and B &gt;<sub>∀</sub> C, then A &gt;<sub>∀</sub> C.</li>
+<li class="fragment"><strong>Transitivity of Equal</strong>: If A =<sub>∀</sub> B and B =<sub>∀</sub> C, then A =<sub>∀</sub> C.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Big Question</h2>
+<p>How do we combine individual rankings into a single social ranking?</p>
 <p><strong>What We Want</strong>: A systematic method (social choice function) that takes individual preference profiles and produces a group preference ranking.</p>
-<p><strong>Examples of Attempted Solutions</strong>: - Majority rule - Plurality voting - Borda count - Condorcet method</p>
-<p><strong>The Problem</strong>: Arrow shows that no method can satisfy all our reasonable requirements simultaneously.</p>
+</section>
+<section class="slide level2">
+<h2>Assumptions Again</h2>
+<p>There are a few strange things about the setup.</p>
+<ul>
+<li class="fragment">Most of us don’t have views about all possible outcomes of an election.</li>
+<li class="fragment">The combination just takes individual <em>rankings</em> into account. It doesn’t look at <em>strength</em> of preference.</li>
+<li class="fragment">The output doesn’t just ask for a winner, but for a full ordering.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>A Non-Answer</h2>
+<p>Say A &gt;<sub>∀</sub> B if more people have A &gt;<sub>i</sub> B than have B &gt;<sub>∀</sub> A, and A =<sub>∀</sub> B if the numbers are the same.</p>
+<p>This is a very simple kind of majoritarian rule.</p>
+</section>
+<section class="slide level2">
+<h2>Condorcet Again</h2>
+<p>You can probably see where this is going.</p>
+<ul>
+<li class="fragment">Imagine that there are three options, A, B and C.</li>
+<li class="fragment">And there are three voters, X, Y and Z.</li>
+<li class="fragment">X has A &gt;<sub>X</sub> B &gt;<sub>X</sub> C.</li>
+<li class="fragment">Y has B &gt;<sub>Y</sub> C &gt;<sub>Y</sub> A.</li>
+<li class="fragment">Z has C &gt;<sub>Z</sub> A &gt;<sub>Z</sub> B.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Condorcet Again</h2>
+<ul>
+<li class="fragment">Since two people (X and Z) prefer A to B, we have A &gt;<sub>∀</sub> B.</li>
+<li class="fragment">Since two people (X and Y) prefer B to C, we have B &gt;<sub>∀</sub> C.</li>
+<li class="fragment">Since two people (Y and Z) prefer C to A, we have C &gt;<sub>∀</sub> A.</li>
+<li class="fragment">And we’ve violated transitivity.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Plurality Again</h2>
+<p>Let’s try a different solution.</p>
+<ul>
+<li class="fragment">Ignore every part of &gt;<sub>i</sub> except who is top.</li>
+<li class="fragment">For each option, give it 1 point for every voter for which it’s the top option.</li>
+<li class="fragment">If the voter has two options tied for top, give then 1/2 point each, and so on for more ties.</li>
+<li class="fragment">Rank the options by how many points.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Plurality Again</h2>
+<ul>
+<li class="fragment">This is guaranteed to satisfy the assumptions.</li>
+<li class="fragment">Any approach where each option gets a number, and you rank the numbers, will produce the right kind of ordering.</li>
+<li class="fragment">But it has a very strange result.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Plurality Again</h2>
+<p>Imagine there are three options, A, B and C, and 100 voters. On Monday the preferences are like this:</p>
+<ul>
+<li class="fragment">40 people have A &gt; B &gt; C.</li>
+<li class="fragment">35 people have B &gt; C &gt; A.</li>
+<li class="fragment">25 people have C &gt; B &gt; A.</li>
+<li class="fragment">So A wins, with 40 votes, and B is second, with 35.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Plurality Again</h2>
+<p>On Tuesday, 10 of the people in the last group change their mind, just about B and C. So now we have.</p>
+<ul>
+<li class="fragment">40 people have A &gt; B &gt; C.</li>
+<li class="fragment">45 people have B &gt; C &gt; A.</li>
+<li class="fragment">15 people have C &gt; B &gt; A.</li>
+<li class="fragment">So now B moves ahead of A in the social ranking, even though no one changed their mind abiout A and B.</li>
+<li class="fragment">Is this odd?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Arrow’s Approach</h2>
+<p>Rather than going through options one at a time, let’s find some principles.</p>
+<ul>
+<li class="fragment">Start with a list of things we’d like the aggregation to be like.</li>
+<li class="fragment">See what kind of things could meet all of the requirements on our list.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Arrow’s Theorem</h2>
+<p>For a very natural set of requirements, there are <strong>zero</strong> aggregation rules that satisfy all of them.</p>
+<ul>
+<li class="fragment">Any aggregation rule you pick will have some slightly odd feature.</li>
+</ul>
 </section>
 <section class="slide level2 scrollable">
-<h2>Arrow’s Conditions for Democratic Choice</h2>
+<h2>Arrow’s Requirements</h2>
 <p>Arrow identified four conditions that seem essential for any fair democratic system:</p>
 <ol type="1">
 <li class="fragment"><strong>Unrestricted Domain</strong> (U)</li>
@@ -181,77 +285,126 @@
 <li class="fragment"><strong>Independence of Irrelevant Alternatives</strong> (I)</li>
 <li class="fragment"><strong>Non-dictatorship</strong> (D)</li>
 </ol>
-<p>We’ll examine each condition, with special focus on Independence of Irrelevant Alternatives.</p>
 </section>
 <section class="slide level2">
-<h2>Condition 1: Unrestricted Domain (U)</h2>
+<h2>Unrestricted Domain (U)</h2>
 <p><strong>What it means</strong>: The voting system must work for ANY possible combination of individual preference rankings.</p>
 <p><strong>Why it seems reasonable</strong>: We shouldn’t restrict what preferences people are allowed to have in a democracy.</p>
-<p><strong>Example</strong>: The system must handle: - Unanimous preferences (everyone agrees) - Completely opposed preferences<br>
-- Cyclical preferences (A &gt; B &gt; C &gt; A in majority comparisons) - Any other logically possible preference profile</p>
 </section>
 <section class="slide level2">
-<h2>Condition 2: Weak Pareto Principle (P)</h2>
-<p><strong>What it means</strong>: If everyone prefers alternative X to alternative Y, then the group ranking should also prefer X to Y.</p>
+<h2>Weak Pareto Principle (P)</h2>
+<p><strong>What it means</strong>: If everyone prefers alternative A to alternative B, then the group ranking should also prefer A to B.</p>
 <p><strong>Why it seems reasonable</strong>: If there’s unanimous agreement, the social choice should reflect that agreement.</p>
-<p><strong>Example</strong>: - If all voters rank A &gt; B - Then the group ranking must have A &gt; B - This seems like a minimal requirement for democracy</p>
 </section>
 <section class="slide level2">
-<h2>Condition 3: Independence of Irrelevant Alternatives (I)</h2>
-<p><strong>What it means</strong>: The social ranking between any two alternatives should depend ONLY on how individuals rank those two alternatives, not on how they rank other alternatives.</p>
+<h2>Vilfredo Pareto</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pareto.jpg"></p>
+<figcaption>Vilfredo Pareto</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Lived 1848-1923.</li>
+<li class="fragment">Trained in Turin, worked primarily at Lausanne.</li>
+<li class="fragment">He died around the time Mussolini came to power, and the Italian fascists claimed him as an inspiration. This <em>may</em> have been a misreading; he often sounds like a classical liberal.</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Pareto Principles</h2>
+<p><strong>Weak Pareto</strong>: If for all i, A &gt;<sub>i</sub> B, then A &gt;<sub>∀</sub> B.</p>
+<p><strong>Strong Pareto</strong>: If for some i, A &gt;<sub>i</sub> B, and for no i B &gt;<sub>i</sub> A (but maybe there are some ties), then A &gt;<sub>∀</sub> B.</p>
+<p>The latter is more contentious, but it isn’t needed for the proof.</p>
+<p>(In fact, all that the proof really needs is that every outcome is possible.)</p>
+</section>
+<section class="slide level2">
+<h2>Independence of Irrelevant Alternatives (I)</h2>
+<p><strong>What it means</strong>: The social ranking between any two alternatives should depend <em>only</em> on how individuals rank those two alternatives, not on how they rank other alternatives.</p>
 <p><strong>Key Insight</strong>: Information about “irrelevant” third alternatives shouldn’t change the relative ranking of two alternatives.</p>
 <p><strong>Why it seems reasonable</strong>: If we’re deciding between A and B, it shouldn’t matter what people think about C.</p>
 </section>
 <section class="slide level2">
-<h2>Independence of Irrelevant Alternatives: Examples</h2>
-<p><strong>Example 1 - Violating IIA</strong>: - Initial preferences: Voter 1: A &gt; B &gt; C, Voter 2: B &gt; A &gt; C - Suppose social choice gives: A &gt; B - Now C is removed from consideration - Preferences become: Voter 1: A &gt; B, Voter 2: B &gt; A<br>
-- IIA requires the social choice to still prefer A &gt; B - Any system that now prefers B &gt; A violates IIA</p>
-<p><strong>Example 2 - Why this matters</strong>: - In presidential elections, the presence of a third-party candidate can change who wins between the two main candidates - This violates IIA and can lead to strategic voting</p>
+<h2>IIA: Formal Statement</h2>
+<p><strong>Formal Definition</strong>: For any two preference profiles R and R’, if every individual has the same preference between alternatives A and B in both profiles, then the social choice between A and B must be the same in both profiles.</p>
+<p>This isn’t a property of how the aggregation function treats what happens on any given day; it’s a property of how it treats possible changes in individual preferences.</p>
 </section>
 <section class="slide level2">
-<h2>Independence of Irrelevant Alternatives: Formal Statement</h2>
-<p><strong>Formal Definition</strong>: For any two preference profiles R and R’, if every individual has the same preference between alternatives x and y in both profiles, then the social choice between x and y must be the same in both profiles.</p>
-<p><strong>In other words</strong>: - Take any two alternatives: x and y - Consider two different voting scenarios - If each voter’s preference between x and y is identical in both scenarios - Then the group’s preference between x and y must also be identical</p>
-<p><strong>This rules out</strong>: Systems where the presence/absence of other alternatives affects pairwise comparisons.</p>
-</section>
-<section class="slide level2">
-<h2>Condition 4: Non-dictatorship (D)</h2>
+<h2>Non-dictatorship (D)</h2>
 <p><strong>What it means</strong>: No single individual’s preferences should always determine the group ranking, regardless of what others prefer.</p>
 <p><strong>Why it seems reasonable</strong>: This is basic to democratic ideals - no one person should have absolute power.</p>
-<p><strong>Formal statement</strong>: There should be no individual i such that for every preference profile, if individual i prefers x to y, then the social choice prefers x to y.</p>
+</section>
+<section class="slide level2">
+<h2>Non-dictatorship (D)</h2>
+<p><strong>Formal statement</strong>: For every individual i, there is some profile R and some pair of options A and B such that in R, A &gt;<sub>i</sub> B, but not A &gt;<sub>∀</sub> B.</p>
 <p><strong>Note</strong>: This doesn’t prevent someone from being influential, just from being decisive in every case.</p>
-</section>
-<section class="slide level2">
-<h2>The Impossibility Theorem</h2>
-<p><strong>Arrow’s Theorem</strong>: There is no social choice function that simultaneously satisfies: - Unrestricted Domain (U) - Weak Pareto Principle (P) - Independence of Irrelevant Alternatives (I)<br>
-- Non-dictatorship (D)</p>
-<p><strong>What this means</strong>: Any democratic voting system must violate at least one of these seemingly reasonable conditions.</p>
-<p><strong>The Proof Strategy</strong>: Arrow showed that assuming all four conditions leads to a logical contradiction.</p>
-</section>
-<section class="slide level2">
-<h2>Why This Matters for Philosophy</h2>
-<p><strong>Implications for Democratic Theory</strong>: - Challenges the idea of “the will of the people” - Shows that aggregating preferences is fundamentally problematic - Raises questions about the legitimacy of democratic outcomes</p>
-<p><strong>Broader Philosophical Questions</strong>: - What does this tell us about collective rationality? - Are there alternative approaches to social choice? - How should we respond to this impossibility?</p>
-<p><strong>Connection to Other Areas</strong>: - Philosophy of mind (collective vs.&nbsp;individual rationality) - Political philosophy (legitimacy of democratic institutions) - Ethics (how to make fair collective decisions)</p>
-</section>
-<section class="slide level2">
-<h2>Common Responses and Escape Routes</h2>
-<p><strong>1. Restrict the Domain</strong>: Limit the types of preferences allowed (violates U)</p>
-<p><strong>2. Accept Dictatorship</strong>: In limited contexts, expert decision-making (violates D)</p>
-<p><strong>3. Drop IIA</strong>: Accept that context matters in social choice (violates I)</p>
-<p><strong>4. Probabilistic Methods</strong>: Use randomization or cardinal utilities</p>
-<p><strong>5. Alternative Frameworks</strong>: Deliberative democracy, constitutional constraints</p>
-<p><strong>The Debate Continues</strong>: Each response involves trade-offs and philosophical commitments.</p>
-</section>
-<section class="slide level2 scrollable">
-<h2>Discussion Questions</h2>
-<ol type="1">
-<li class="fragment"><p>Which of Arrow’s four conditions would you be most willing to give up? Why?</p></li>
-<li class="fragment"><p>Does Arrow’s Theorem show that democracy is impossible, or just that perfect democracy is impossible?</p></li>
-<li class="fragment"><p>How might this theorem apply to other collective decision-making contexts (committees, families, etc.)?</p></li>
-<li class="fragment"><p>Do you think the Independence of Irrelevant Alternatives condition is actually reasonable? Can you think of cases where context should matter?</p></li>
-<li class="fragment"><p>What does this theorem tell us about the nature of collective rationality?</p></li>
-</ol>
+<!--
+---
+
+## The Impossibility Theorem
+
+**Arrow's Theorem**: There is no social choice function that simultaneously satisfies:
+- Unrestricted Domain (U)
+- Weak Pareto Principle (P)
+- Independence of Irrelevant Alternatives (I)  
+- Non-dictatorship (D)
+
+**What this means**: Any democratic voting system must violate at least one of these seemingly reasonable conditions.
+
+**The Proof Strategy**: Arrow showed that assuming all four conditions leads to a logical contradiction.
+
+---
+
+## Why This Matters for Philosophy
+
+**Implications for Democratic Theory**:
+- Challenges the idea of "the will of the people"
+- Shows that aggregating preferences is fundamentally problematic
+- Raises questions about the legitimacy of democratic outcomes
+
+**Broader Philosophical Questions**:
+- What does this tell us about collective rationality?
+- Are there alternative approaches to social choice?
+- How should we respond to this impossibility?
+
+**Connection to Other Areas**:
+- Philosophy of mind (collective vs. individual rationality)
+- Political philosophy (legitimacy of democratic institutions)
+- Ethics (how to make fair collective decisions)
+
+---
+
+## Common Responses and Escape Routes
+
+**1. Restrict the Domain**: Limit the types of preferences allowed (violates U)
+
+**2. Accept Dictatorship**: In limited contexts, expert decision-making (violates D)
+
+**3. Drop IIA**: Accept that context matters in social choice (violates I)
+
+**4. Probabilistic Methods**: Use randomization or cardinal utilities
+
+**5. Alternative Frameworks**: Deliberative democracy, constitutional constraints
+
+**The Debate Continues**: Each response involves trade-offs and philosophical commitments.
+
+---
+
+## Discussion Questions
+
+1. Which of Arrow's four conditions would you be most willing to give up? Why?
+
+2. Does Arrow's Theorem show that democracy is impossible, or just that perfect democracy is impossible?
+
+3. How might this theorem apply to other collective decision-making contexts (committees, families, etc.)?
+
+4. Do you think the Independence of Irrelevant Alternatives condition is actually reasonable? Can you think of cases where context should matter?
+
+5. What does this theorem tell us about the nature of collective rationality?
+-->
 
 </section>
     </div>

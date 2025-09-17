@@ -206,10 +206,11 @@ This isn't a property of how the aggregation function treats what happens on any
 
 ## Non-dictatorship (D)
 
-**Formal statement**: For every individual i, there is some profile R and some pair of options A and B such that in R, 
+**Formal statement**: For every individual i, there is some profile R and some pair of options A and B such that in R, A >~i~ B, but not A >~∀~ B.
 
 **Note**: This doesn't prevent someone from being influential, just from being decisive in every case.
 
+<!--
 ---
 
 ## The Impossibility Theorem
@@ -272,3 +273,4 @@ This isn't a property of how the aggregation function treats what happens on any
 4. Do you think the Independence of Irrelevant Alternatives condition is actually reasonable? Can you think of cases where context should matter?
 
 5. What does this theorem tell us about the nature of collective rationality?
+-->
