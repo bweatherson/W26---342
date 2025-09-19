@@ -6,7 +6,7 @@ date-format: full
 format:
   revealjs:
       theme: [default, custom_theme_scss.scss]
-      slide-number: true
+      slide-number: "c/t"
       show-slide-number: all
       hash-type: number
       preview-links: auto

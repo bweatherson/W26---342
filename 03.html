@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="03_files/libs/revealjs/dist/theme/quarto-af94383f695d931ba071449197ddc6ee.css">
+  <link rel="stylesheet" href="03_files/libs/revealjs/dist/theme/quarto-eb66ecb7bf8bc5ed62219ba7ef57d4f3.css">
   <link rel="stylesheet" href="custom_styles_css.css">
   <link href="03_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="03_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -135,6 +135,11 @@
 
   <p class="date">Wednesday, January 14, 2026</p>
 </section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Overview</h1>
+
+</section>
 <section class="slide level2">
 <h2>Kenneth Arrow</h2>
 <div class="columns">
@@ -174,18 +179,23 @@
 </section>
 <section class="slide level2">
 <h2>Group Preference Rankings</h2>
-<p>We’ll write A &gt;<sub>∀</sub> B to mean that the group prefers A to B, and A =<sub>∀</sub> B to mean that the group thinks they are equally good.</p>
+<p>We’ll write A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B to mean that the group prefers A to B, and A =<sub><span class="math inline">\(\forall\)</span></sub> B to mean that the group thinks they are equally good.</p>
 <p><strong>Same Key Assumptions</strong></p>
 <ul>
-<li class="fragment"><strong>Completeness</strong>: Exactly one of A &gt;<sub>∀</sub> B, B &gt;<sub>∀</sub> A, and A =<sub>∀</sub> B holds.</li>
-<li class="fragment"><strong>Transitivity of Better</strong>: If A &gt;<sub>∀</sub> B and B &gt;<sub>∀</sub> C, then A &gt;<sub>∀</sub> C.</li>
-<li class="fragment"><strong>Transitivity of Equal</strong>: If A =<sub>∀</sub> B and B =<sub>∀</sub> C, then A =<sub>∀</sub> C.</li>
+<li class="fragment"><strong>Completeness</strong>: Exactly one of A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B, B &gt;<sub><span class="math inline">\(\forall\)</span></sub> A, and A =<sub><span class="math inline">\(\forall\)</span></sub> B holds.</li>
+<li class="fragment"><strong>Transitivity of Better</strong>: If A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B and B &gt;<sub><span class="math inline">\(\forall\)</span></sub> C, then A &gt;<sub><span class="math inline">\(\forall\)</span></sub> C.</li>
+<li class="fragment"><strong>Transitivity of Equal</strong>: If A =<sub><span class="math inline">\(\forall\)</span></sub> B and B =<sub><span class="math inline">\(\forall\)</span></sub> C, then A =<sub><span class="math inline">\(\forall\)</span></sub> C.</li>
 </ul>
 </section>
 <section class="slide level2">
 <h2>Big Question</h2>
 <p>How do we combine individual rankings into a single social ranking?</p>
 <p><strong>What We Want</strong>: A systematic method (social choice function) that takes individual preference profiles and produces a group preference ranking.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Background</h1>
+
 </section>
 <section class="slide level2">
 <h2>Assumptions Again</h2>
@@ -198,7 +208,7 @@
 </section>
 <section class="slide level2">
 <h2>A Non-Answer</h2>
-<p>Say A &gt;<sub>∀</sub> B if more people have A &gt;<sub>i</sub> B than have B &gt;<sub>∀</sub> A, and A =<sub>∀</sub> B if the numbers are the same.</p>
+<p>Say A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B if more people have A &gt;<sub>i</sub> B than have B &gt;<sub><span class="math inline">\(\forall\)</span></sub> A, and A =<sub><span class="math inline">\(\forall\)</span></sub> B if the numbers are the same.</p>
 <p>This is a very simple kind of majoritarian rule.</p>
 </section>
 <section class="slide level2">
@@ -215,9 +225,9 @@
 <section class="slide level2">
 <h2>Condorcet Again</h2>
 <ul>
-<li class="fragment">Since two people (X and Z) prefer A to B, we have A &gt;<sub>∀</sub> B.</li>
-<li class="fragment">Since two people (X and Y) prefer B to C, we have B &gt;<sub>∀</sub> C.</li>
-<li class="fragment">Since two people (Y and Z) prefer C to A, we have C &gt;<sub>∀</sub> A.</li>
+<li class="fragment">Since two people (X and Z) prefer A to B, we have A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B.</li>
+<li class="fragment">Since two people (X and Y) prefer B to C, we have B &gt;<sub><span class="math inline">\(\forall\)</span></sub> C.</li>
+<li class="fragment">Since two people (Y and Z) prefer C to A, we have C &gt;<sub><span class="math inline">\(\forall\)</span></sub> A.</li>
 <li class="fragment">And we’ve violated transitivity.</li>
 </ul>
 </section>
@@ -259,6 +269,11 @@
 <li class="fragment">So now B moves ahead of A in the social ranking, even though no one changed their mind abiout A and B.</li>
 <li class="fragment">Is this odd?</li>
 </ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>The Theorem</h1>
+
 </section>
 <section class="slide level2">
 <h2>Arrow’s Approach</h2>
@@ -316,16 +331,15 @@
 </section>
 <section class="slide level2">
 <h2>Pareto Principles</h2>
-<p><strong>Weak Pareto</strong>: If for all i, A &gt;<sub>i</sub> B, then A &gt;<sub>∀</sub> B.</p>
-<p><strong>Strong Pareto</strong>: If for some i, A &gt;<sub>i</sub> B, and for no i B &gt;<sub>i</sub> A (but maybe there are some ties), then A &gt;<sub>∀</sub> B.</p>
+<p><strong>Weak Pareto</strong>: If for all i, A &gt;<sub>i</sub> B, then A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B.</p>
+<p><strong>Strong Pareto</strong>: If for some i, A &gt;<sub>i</sub> B, and for no i B &gt;<sub>i</sub> A (but maybe there are some ties), then A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B.</p>
 <p>The latter is more contentious, but it isn’t needed for the proof.</p>
 <p>(In fact, all that the proof really needs is that every outcome is possible.)</p>
 </section>
 <section class="slide level2">
 <h2>Independence of Irrelevant Alternatives (I)</h2>
 <p><strong>What it means</strong>: The social ranking between any two alternatives should depend <em>only</em> on how individuals rank those two alternatives, not on how they rank other alternatives.</p>
-<p><strong>Key Insight</strong>: Information about “irrelevant” third alternatives shouldn’t change the relative ranking of two alternatives.</p>
-<p><strong>Why it seems reasonable</strong>: If we’re deciding between A and B, it shouldn’t matter what people think about C.</p>
+<p><strong>Key Insight</strong>: If we’re deciding between A and B, it shouldn’t matter what people think about C.</p>
 </section>
 <section class="slide level2">
 <h2>IIA: Formal Statement</h2>
@@ -339,8 +353,39 @@
 </section>
 <section class="slide level2">
 <h2>Non-dictatorship (D)</h2>
-<p><strong>Formal statement</strong>: For every individual i, there is some profile R and some pair of options A and B such that in R, A &gt;<sub>i</sub> B, but not A &gt;<sub>∀</sub> B.</p>
+<p><strong>Formal statement</strong>: For every individual i, there is some profile R and some pair of options A and B such that in R, A &gt;<sub>i</sub> B, but not A &gt;<sub><span class="math inline">\(\forall\)</span></sub> B.</p>
 <p><strong>Note</strong>: This doesn’t prevent someone from being influential, just from being decisive in every case.</p>
+</section>
+<section class="slide level2">
+<h2>Non-Dictatorship (D)</h2>
+<p>You might have wanted a stronger condition, like this one. But it turns out D is enough to get the result.</p>
+<dl>
+<dt class="fragment">Anonymity (A)</dt>
+<dd class="fragment">
+If two people switch their preferences, so on Tuesday X has the views that Y had on Monday, and Y has the views that X had on Monday, that shouldn’t change the answer.
+</dd>
+</dl>
+</section>
+<section class="slide level2">
+<h2>The Impossibility Theorem</h2>
+<p><strong>Arrow’s Theorem</strong>: There is no social choice function that simultaneously satisfies:</p>
+<ul>
+<li class="fragment">Unrestricted Domain (U)</li>
+<li class="fragment">Weak Pareto Principle (P)</li>
+<li class="fragment">Independence of Irrelevant Alternatives (I)<br>
+</li>
+<li class="fragment">Non-dictatorship (D)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Proof</h2>
+<p>I’m not going to make you sit through a proof here. There are a million proofs out there if you want to find one.</p>
+<p>The usual structure is to assume U, P and I, and infer the existence of a dictator.</p>
+<p>The main benefit of sitting through a proof is that you see just how strong a condition I is, and we’ll come back to that strength next time.</p>
+</section>
+<section class="slide level2">
+<h2>For Next Time</h2>
+<p>We’ll look at ways out of, or around, the problem.</p>
 <!--
 ---
 
@@ -406,7 +451,7 @@
 5. What does this theorem tell us about the nature of collective rationality?
 -->
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="logo.png" class="slide-logo"></p>
@@ -464,7 +509,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'h.v',
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

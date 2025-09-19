@@ -65,7 +65,12 @@ $font-size-root: 40px;
   font-size: $font-size-h1;
   border-bottom: 3px solid $secondary-color;
   padding-bottom: 0.3em;
+  padding-top: 5em;
   margin-bottom: 0.8em;
+
+  &.title {
+    padding-top: 0em;
+  }
 }
 
 .reveal h2 {

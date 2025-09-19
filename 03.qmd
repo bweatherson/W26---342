@@ -1,5 +1,5 @@
 ---
-title: "Arrow"
+title: "Arrow's Impossibility Theorem"
 date: 1/14/2026
 format:
     revealjs: default
@@ -46,13 +46,13 @@ We'll write A >~i~ B to mean that person i prefers A to B, and A =~i~ B to mean 
 
 ## Group Preference Rankings
 
-We'll write A >~∀~ B to mean that the group prefers A to B, and A =~∀~ B to mean that the group thinks they are equally good.
+We'll write A >~$\forall$~ B to mean that the group prefers A to B, and A =~$\forall$~ B to mean that the group thinks they are equally good.
 
 **Same Key Assumptions**
 
-- **Completeness**: Exactly one of A >~∀~ B, B >~∀~ A, and A =~∀~ B holds.
-- **Transitivity of Better**: If A >~∀~ B and B >~∀~ C, then A >~∀~ C.
-- **Transitivity of Equal**: If A =~∀~ B and B =~∀~ C, then A =~∀~ C.
+- **Completeness**: Exactly one of A >~$\forall$~ B, B >~$\forall$~ A, and A =~$\forall$~ B holds.
+- **Transitivity of Better**: If A >~$\forall$~ B and B >~$\forall$~ C, then A >~$\forall$~ C.
+- **Transitivity of Equal**: If A =~$\forall$~ B and B =~$\forall$~ C, then A =~$\forall$~ C.
 
 ## Big Question
 
@@ -72,7 +72,7 @@ There are a few strange things about the setup.
 
 ## A Non-Answer
 
-Say A >~∀~ B if more people have A >~i~ B than have B >~∀~ A, and A =~∀~ B if the numbers are the same.
+Say A >~$\forall$~ B if more people have A >~i~ B than have B >~$\forall$~ A, and A =~$\forall$~ B if the numbers are the same.
 
 This is a very simple kind of majoritarian rule.
 
@@ -88,9 +88,9 @@ You can probably see where this is going.
 
 ## Condorcet Again
 
-- Since two people (X and Z) prefer A to B, we have A >~∀~ B.
-- Since two people (X and Y) prefer B to C, we have B >~∀~ C.
-- Since two people (Y and Z) prefer C to A, we have C >~∀~ A.
+- Since two people (X and Z) prefer A to B, we have A >~$\forall$~ B.
+- Since two people (X and Y) prefer B to C, we have B >~$\forall$~ C.
+- Since two people (Y and Z) prefer C to A, we have C >~$\forall$~ A.
 - And we've violated transitivity.
 
 ## Plurality Again
@@ -181,9 +181,9 @@ Arrow identified four conditions that seem essential for any fair democratic sys
 
 ## Pareto Principles
 
-**Weak Pareto**: If for all i, A >~i~ B, then A >~∀~ B.
+**Weak Pareto**: If for all i, A >~i~ B, then A >~$\forall$~ B.
 
-**Strong Pareto**: If for some i, A >~i~ B, and for no i B >~i~ A (but maybe there are some ties), then A >~∀~ B.
+**Strong Pareto**: If for some i, A >~i~ B, and for no i B >~i~ A (but maybe there are some ties), then A >~$\forall$~ B.
 
 The latter is more contentious, but it isn't needed for the proof.
 
@@ -209,7 +209,7 @@ This isn't a property of how the aggregation function treats what happens on any
 
 ## Non-dictatorship (D)
 
-**Formal statement**: For every individual i, there is some profile R and some pair of options A and B such that in R, A >~i~ B, but not A >~∀~ B.
+**Formal statement**: For every individual i, there is some profile R and some pair of options A and B such that in R, A >~i~ B, but not A >~$\forall$~ B.
 
 **Note**: This doesn't prevent someone from being influential, just from being decisive in every case.
 

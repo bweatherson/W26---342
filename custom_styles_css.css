@@ -4,6 +4,7 @@
 .reveal .slides {
   margin-left: 0 !important;
   width: 100% !important;
+  height: 100vh !important;
   left: 0 !important;
   transform: none !important;
 }
@@ -71,7 +72,7 @@
   width: 100% !important;
   left: 0 !important;
   top: 0% !important;
-  transform: translateY(-50%) !important;
+  transform: translateY(-20%) !important;
 }
 
 /* Better spacing for title slides */
@@ -197,4 +198,11 @@
   background: rgba(0, 0, 0, 0) !important;
   border-radius: 4px !important;
   padding: 8px !important;
+}
+
+.callout {
+  font-size: 1em !important;
+}
+.callout-body {
+  font-size: 1em !important;
 }

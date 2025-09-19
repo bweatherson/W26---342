@@ -1,0 +1,83 @@
+---
+title: "Sen's Paradox"
+date: 1/26/2026
+format:
+    revealjs: default
+    beamer: default
+---
+
+# Pareto Principles
+
+## Pareto Principles
+
+Usually we focus on cases of conflict between individuals when talking about aggregation.
+
+The cases where everyone agrees should be the easy case.
+
+This intuition is formalised in the **Weak Pareto Principle**.
+
+::: {.callout-note}
+### Weak Pareto Principle
+
+For any options A and B, if all voters agree that A > B, then A > ~$\forall$~ B.
+:::
+
+## Pareto Principles
+
+We're just going to look at that principle today, but as a reminder, the 'weak' there is because there is also a **Strong Pareto Principle**.
+
+::: {.callout-note}
+### Strong Pareto Principle
+
+For any options A and B, if 
+
+::::{.nonincremental}
+1. All voters agree that A $\geq$ B, and
+2. Some voters think that A > B;
+::::
+
+then A > ~$\forall$~ B.
+:::
+
+## Preferences and Interests
+
+These Pareto principles are very important when we are thinking of aggregating everyone's **interests**.
+
+What we'll see is that they aren't as compelling when we're aggregating everyone's **preferences**.
+
+## Preferences and Interests
+
+The **subjective theory of welfare** says that your interests, i.e., what makes you better off, are just your preferences.
+
+There is an obvious (and well-known) problem with this.
+
+You might hope for good things for someone else.
+
+If those hopes are realised, that's good for them, not necessarily for you (especially if you never find out).
+
+## Preferences and Interests
+
+Things get even more complicated if some people in the community prefer that bad things happen to other people, or even that other people do not get what they want.
+
+In those cases, Pareto principles will not be as compelling.
+
+# Amartya Sen
+
+## Amartya Sen
+
+::: {.columns}
+
+:::: {.column-width: 50%}
+![Amartya Sen](images/sen.jpg)
+::::
+
+:::: {.column-width: 50%}
+- Born in 1933.
+- Won Nobel Prize in 1998.
+- Influential in applied and theoretical economics, and in philosophy.
+- Promoted (along with Martha Nussbaum) the capabilities approach to welfare.
+::::
+
+:::
+
+## 

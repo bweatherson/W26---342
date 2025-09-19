@@ -125,11 +125,11 @@ In particular, he thought that we should give up the constraint that the output 
 
 ## Give Up Ordering
 
-So let's say that we want an output to be a pair >~∀~ and =~∀~, and our rule is unanimity.
+So let's say that we want an output to be a pair >~$\forall$~ and =~$\forall$~, and our rule is unanimity.
 
-If everyone prefers A to B, then A >~∀~ B, and if everyone ranks them equally, then A =~∀~ B.
+If everyone prefers A to B, then A >~$\forall$~ B, and if everyone ranks them equally, then A =~$\forall$~ B.
 
-We still insist that at most one of A >~∀~ B, B >~∀~ A, and A =~∀~ B holds, but we don't insist that at least one holds.
+We still insist that at most one of A >~$\forall$~ B, B >~$\forall$~ A, and A =~$\forall$~ B holds, but we don't insist that at least one holds.
 
 ## Give Up Ordering
 
@@ -149,7 +149,7 @@ The problem is that this is an incredibly weak rule.
 - Moreover, dropping completeness essentially only gets you this extra rule.
 - Allan Gibbard (a long time member of the philosophy department at UM) proved that the only rule satisfying all four constraints but not completeness is unanimity among 'oligarchs', where membership of the oligarchy could be anything.
 
-# IIA
+# Independence of Irrelevant Alternatives
 
 ## Voting Systems
 
