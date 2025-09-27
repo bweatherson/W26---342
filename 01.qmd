@@ -1,0 +1,96 @@
+---
+title: "Hello World"
+date: 1/7/2026
+format:
+    revealjs: default
+    beamer: default
+---
+
+# Introduction
+
+## The Course
+
+This is **Philosophy 342**: Introduction to Theory of Choice in Groups.
+
+It introduces a bunch of topics that have the following features:
+
+1. They are to do with human choices;
+2. They raise philosophically interesting questions; and
+3. At least some of these questions arise from how choices by different people interact.
+
+## Lectures By...
+
+I'm Brian Weatherson, a professor in the philosophy department.
+
+My office is **2207 Angell Hall**.
+
+My email is **weath@umich.edu**.
+
+My office hours are ???? You should drop by any week to ask about the course, or other philosophy courses, or to moan about how your favorite sports team is doing, etc.
+
+## Discussion Sections
+
+The discussion sections for the course are led by ???
+
+Their office is ???
+
+Their office hours are ???
+
+And you should also drop by their office hours with questions about this course, other philosophy courses, etc.
+
+## Books
+
+There are two textbooks for this course.
+
+::: {.columns}
+
+:::: {.column width="50%"}
+![Lee Elkin and Richard Pettigrew, *Opinion Pooling*](images/opinion-pooling.jpg)
+::::
+
+:::: {.column width="50%"}
+![Cailin O'Connor, *Modeling Scientific Communities*](images/msc.jpg.jpg)
+::::
+
+:::
+
+## Books
+
+Both books are available through the library, which has a subscription to the Cambridge Elements series.
+
+There is also a Canvas site which has a number of readings on it, though we won't start those for a little bit.
+
+## More Books
+
+If you are interested in the material, and would like to investigate more, the two books to start with are:
+
+- *Collective Choice and Social Action*, Amartya Sen, 1970.
+- *The Evolution of Cooperation*, Robert Axelrod, 1984.
+
+We'll talk about the material in both of these as the course progresses, and neither is **required**, but they are both deservedly classics.
+
+## Plan
+
+The course will be in two halves, roughly pivoting around the mid-term break.
+
+1. Pooling - how do we form collective attitudes out of individual attitudes?
+2. Modeling - what can we learn about social structures by looking at very simple models of them?
+
+# Pooling
+
+## A Hypothetical
+
+::: {.columns}
+
+:::: {.column width="50%"}
+![NFL replay officials](images/nfl.jpg)
+::::
+
+:::: {.column width="50%"}
+It's easiest to understand some of the puzzles about pooling with an example.
+
+Let's start by imagining a future world where the NFL, in its wisdom, has gone from having a single replay official to having three replay officials, who have to vote on close calls.
+::::
+
+:::
+
