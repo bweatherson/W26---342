@@ -4,3 +4,5 @@
 .Rhistory
 .gitignore
 W26-342.Rproj
+
+**/*.quarto_ipynb

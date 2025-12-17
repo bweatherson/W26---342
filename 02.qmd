@@ -65,6 +65,8 @@ Really incredibly simple. This means:
 1. It's simple to understand how votes and wins are related.
 2. It's simple to work out on election night who won.
 
+. . .
+
 It does not mean that it's simple for the voter to figure out what to do. We'll come back to this.
 
 ## Disadvantages
@@ -82,6 +84,8 @@ Imagine a voter in the following election.
 - The voter really dislikes A, and is indifferent between B and C.
 - They think that if everyone voted for their favorite candidate, it would be 40% A; 30% B; 30% C.
 
+. . .
+
 What should they do?
 
 ## Extending the Challenge
@@ -92,6 +96,8 @@ Do you spend more of your time arguing
 
 1. That you are better than the other of B/C?
 2. That you are more popular, and hence more likely to win, than the other in B/C?
+
+. . .
 
 In practice in the UK, which has a lot of these three way contests, it's often option 2.
 
@@ -120,6 +126,8 @@ Vote in two stages.
 
 1. Two elections - twice the expense both for states and for voters.
 2. Non-monotonic. Getting less votes can make you a winner.
+
+. . .
 
 This is a bit complicated, so I'll work though it on next slide.
 
@@ -274,11 +282,11 @@ I won't go over these in detail, but I wanted to make sure you knew about anothe
 ::: {.columns}
 
 :::: {.column width="50%"}
-![Jean-Charles de Borda (1733-1799)](Jean_Charles_Borda.jpg){width="70%"}
+![Jean-Charles de Borda (1733-1799)](images/Jean_Charles_Borda.jpg){width="70%"}
 ::::
 
 :::: {.column width="50%"}
-![Marquis de Condorcet (1743-1794)](Nicolas_de_Condorcet.PNG){width="76%"}
+![Marquis de Condorcet (1743-1794)](images/Nicolas_de_Condorcet.PNG){width="76%"}
 ::::
 
 :::
